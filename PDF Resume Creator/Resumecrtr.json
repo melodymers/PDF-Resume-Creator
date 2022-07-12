@@ -1,0 +1,62 @@
+{
+  {
+    "basic information": {
+      "name": "Melody M. Meria",
+      "label": "Programmer",
+      "email": "melodymeria2022@gmail.com",
+      "phone": "09554884691",
+      "location": {
+        "address": "09 Diverside Homes 2nd St.",
+        "Postal Code": "1442",
+        "city": "Valenzuela City"
+      },
+      "profiles": [
+        {
+          "Social Media": "FaceBook",
+          "username": "Melody Mallari Meria",
+          "URL": "https://www.facebook.com/meriyuh/"
+        }
+      ]
+    },
+    "education": [
+      {
+        "institution": "Polytechnic University Philippines",
+        "course": [
+          "Bachelor of Science in Computer Engineering"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Web Development",
+        "level": "Master",
+        "keywords": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "English and Filipino",
+      }
+    ],
+    "interests": [
+      {
+        "name": "Gaming ",
+        "keywords": [
+          "Mobile",
+          "Arena"
+        ]
+      }
+    ],
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ]
+}
