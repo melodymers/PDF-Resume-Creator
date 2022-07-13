@@ -18,7 +18,7 @@ namespace PDF_Resume_Creator
             InitializeComponent();
         }
 
-        public class ResumeGen
+        public class Resumecrtr
         {
             public string lastname { get; set; }
             public string firstname { get; set; }
@@ -50,7 +50,7 @@ namespace PDF_Resume_Creator
             {
                 jsonFile = reader.ReadToEnd();
             }
-            var resumeFromJson = JsonConvert.DeserializeObject<ResumeGen>(jsonFile);
+            var resumeFromJson = JsonConvert.DeserializeObject<Resumecrtr>(jsonFile);
 
             string lastname = resumeFromJson.lastname;
             string firstname = resumeFromJson.lastname;
@@ -83,8 +83,21 @@ namespace PDF_Resume_Creator
                     PdfDocument pdf = new PdfDocument();
                     pdf.Info.Title = lastname + "_" + "Resume";
                     PdfPage page = pdf.AddPage();
+
+                    XGraphics graph = XGraphics.FromPdfPage(page);
+                    XFont bigfont = new XFont("SoinSans", 20, XFontStyle.Bold);
+                    XFont smallfont = new XFont("SoinSans", 16, XFontStyle.Regular);
+                    XFont titlefont = new XFont("SoinSans", 30, XFontStyle.Bold);
+
+                    XPen pen = new XPen(XColors.LightCoral, 20);
+                    XPen linerleft = new XPen(XColors.Snow, 1); ;
+                    XPen linerright = new XPen(XColors.Snow, 1);
+
+                    pdf.Save(saveFileDialog.FileName);
                 }
             }
+            Application.Restart();
+            Environment.Exit(0);
         }
     }
 }

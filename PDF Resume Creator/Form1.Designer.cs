@@ -51,6 +51,7 @@
             this.generateBtn.BackgroundImage = global::PDF_Resume_Creator.Properties.Resources.btn_only;
             this.generateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.generateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.generateBtn.ForeColor = System.Drawing.Color.Transparent;
             this.generateBtn.Location = new System.Drawing.Point(148, 366);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(283, 129);
