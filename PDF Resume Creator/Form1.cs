@@ -44,7 +44,32 @@ namespace PDF_Resume_Creator
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
+            string jsonFile;
+            using (var reader = new StreamReader(fileName))
+            {
+                jsonFile = reader.ReadToEnd();
+            }
+            var resumeFromJson = JsonConvert.DeserializeObject<ResumeGen>(jsonFile);
 
+            string name = resumeFromJson.name;
+            string label = resumeFromJson.label;
+            string Email = resumeFromJson.email;
+            string Phone = resumeFromJson.phone;
+
+            string address = resumeFromJson.address;
+            string postalcode = resumeFromJson.PostalCode;
+            string city = resumeFromJson.city;
+
+            string media = resumeFromJson.SocialMedia;
+            string username = resumeFromJson.username;
+            string url = resumeFromJson.URL;
+
+            string school = resumeFromJson.institution;
+            string course = resumeFromJson.course;
+
+            string language = resumeFromJson.language;
+            string interest = resumeFromJson.interest;
+            string keywords = resumeFromJson.keywords;
         }
     }
 }

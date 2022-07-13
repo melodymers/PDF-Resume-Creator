@@ -38,7 +38,7 @@
             this.titleBox.BackColor = System.Drawing.Color.Transparent;
             this.titleBox.BackgroundImage = global::PDF_Resume_Creator.Properties.Resources.eee;
             this.titleBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.titleBox.Location = new System.Drawing.Point(61, 22);
+            this.titleBox.Location = new System.Drawing.Point(63, 78);
             this.titleBox.Name = "titleBox";
             this.titleBox.Size = new System.Drawing.Size(442, 132);
             this.titleBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -51,7 +51,7 @@
             this.generateBtn.BackgroundImage = global::PDF_Resume_Creator.Properties.Resources.btn_only;
             this.generateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.generateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.generateBtn.Location = new System.Drawing.Point(147, 370);
+            this.generateBtn.Location = new System.Drawing.Point(148, 366);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(283, 129);
             this.generateBtn.TabIndex = 1;
