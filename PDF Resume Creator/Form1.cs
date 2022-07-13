@@ -20,7 +20,8 @@ namespace PDF_Resume_Creator
 
         public class ResumeGen
         {
-            public string name { get; set; }
+            public string lastname { get; set; }
+            public string firstname { get; set; }
             public string label { get; set; }
             public string email { get; set; }
             public string phone { get; set; }
@@ -51,7 +52,8 @@ namespace PDF_Resume_Creator
             }
             var resumeFromJson = JsonConvert.DeserializeObject<ResumeGen>(jsonFile);
 
-            string name = resumeFromJson.name;
+            string lastname = resumeFromJson.lastname;
+            string firstname = resumeFromJson.lastname;
             string label = resumeFromJson.label;
             string Email = resumeFromJson.email;
             string Phone = resumeFromJson.phone;
@@ -70,6 +72,20 @@ namespace PDF_Resume_Creator
             string language = resumeFromJson.language;
             string interest = resumeFromJson.interest;
             string keywords = resumeFromJson.keywords;
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.InitialDirectory = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator";
+                saveFileDialog.FileName = lastname + " " + firstname + ".pdf";
+                saveFileDialog.Filter = "PDF|*.pdf";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    PdfDocument pdf = new PdfDocument();
+                    pdf.Info.Title = lastname + "_" + "Resume";
+                    PdfPage page = pdf.AddPage();
+                }
+            }
         }
     }
 }
+
