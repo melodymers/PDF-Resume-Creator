@@ -12,7 +12,7 @@ namespace PDF_Resume_Creator
 {
     public partial class generatePage : Form
     {
-        private readonly string fileName = (@"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\Resumecrtr.json");
+        private readonly string PDF_Resume_Creator = (@"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\Resumecrtr.json");
         public generatePage()
         {
             InitializeComponent();
@@ -26,8 +26,10 @@ namespace PDF_Resume_Creator
             public string email { get; set; }
             public string phone { get; set; }
             public string address { get; set; }
-            public string PostalCode { get; set; }
+            public string barangay { get; set; }
             public string city { get; set; }
+            public string region { get; set; }
+            public string PostalCode { get; set; }
             public string SocialMedia { get; set; }
             public string username { get; set; }
             public string URL { get; set; }
@@ -45,22 +47,25 @@ namespace PDF_Resume_Creator
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
-            string jsonFile;
-            using (var reader = new StreamReader(fileName))
+            string JsonFile;
+            using (var reader = new StreamReader(PDF_Resume_Creator))
             {
-                jsonFile = reader.ReadToEnd();
+                JsonFile = reader.ReadToEnd();
             }
-            var resumeFromJson = JsonConvert.DeserializeObject<Resumecrtr>(jsonFile);
+            var resumeFromJson = JsonConvert.DeserializeObject<Resumecrtr>(JsonFile);
 
             string lastname = resumeFromJson.lastname;
-            string firstname = resumeFromJson.lastname;
+            string firstname = resumeFromJson.firstname;
             string label = resumeFromJson.label;
             string Email = resumeFromJson.email;
             string Phone = resumeFromJson.phone;
 
             string address = resumeFromJson.address;
-            string postalcode = resumeFromJson.PostalCode;
+            string barangay = resumeFromJson.barangay;
             string city = resumeFromJson.city;
+            string region = resumeFromJson.region;
+            string postalcode = resumeFromJson.PostalCode;
+            
 
             string media = resumeFromJson.SocialMedia;
             string username = resumeFromJson.username;
@@ -105,6 +110,38 @@ namespace PDF_Resume_Creator
                     string png = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\melody.png";
                     XImage image = XImage.FromFile(png);
                     graph.DrawImage(image, marginleft, 50, 150, 150);
+
+                    graph.DrawString("BASIC INFORMATION:", bigfont, XBrushes.Chocolate, new XRect(marginleft, initialleft + 60, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    graph.DrawString(Email, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 90, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    graph.DrawString(Phone, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 110, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    graph.DrawString(label, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 130, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+
+                    graph.DrawRectangle (linerleft, marginleft, initialleft + 50, 150, 1);
+                    graph.DrawString("ADDRESS:", bigfont, XBrushes.Chocolate, new XRect(marginleft, initialleft + 160, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(address, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 190, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(barangay, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 210, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(city, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 210, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(region, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 250, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(postalcode, smallfont, XBrushes.Black, new XRect(marginleft, initialleft + 290, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    //3RD
+                    int marginmiddle = 220;
+                    int initialmiddle = 200;
+
+                    graph.DrawString(firstname, titlefont, XBrushes.Black, new XRect(marginmiddle, initialmiddle - 110, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(lastname, titlefont, XBrushes.DarkGray, new XRect(marginmiddle, initialmiddle - 70, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    graph.DrawRectangle(linerright, marginmiddle, initialmiddle - 10, 350, 1);
+                    graph.DrawString("CONTACT:", bigfont, XBrushes.Chocolate, new XRect(marginmiddle, initialmiddle, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                    graph.DrawString(media, smallfont, XBrushes.Black, new XRect(marginmiddle, initialmiddle + 30, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    graph.DrawString(username, smallfont, XBrushes.Black, new XRect(marginmiddle + 25, initialmiddle + 50, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+
+                    graph.DrawString(url, smallfont, XBrushes.Black, new XRect(marginmiddle, initialmiddle + 70, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
 
                     pdf.Save(saveFileDialog.FileName);
                 }

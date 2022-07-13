@@ -1,6 +1,4 @@
 {
-  {
-    "basic information": {
       "lastname": "Meria",
       "firstname": "Melody",
       "label": "Programmer",
@@ -8,12 +6,11 @@
       "phone": "09554884691",
       "location": {
         "address": "09 Diverside Homes 2nd St.",
-        "barangay": "Gen T. de Leon"
+        "barangay": "Gen T. de Leon",
         "city": "Valenzuela City",
         "region": "NCR",
-        "PostalCode": "1442"
+        "PostalCode": "1442",
 
-      },
       "profiles": [
         {
           "SocialMedia": "FaceBook",
@@ -44,12 +41,12 @@
         ]
       }
     ],
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
+    "exclude": [
+      "**/bin",
+      "**/bower_components",
+      "**/jspm_packages",
+      "**/node_modules",
+      "**/obj",
+      "**/platforms"
+    ]
 }
