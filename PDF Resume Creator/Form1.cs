@@ -10,10 +10,10 @@ using Newtonsoft.Json.Linq;
 
 namespace PDF_Resume_Creator
 {
-    public partial class Form1 : Form
+    public partial class generatePage : Form
     {
         private readonly string fileName = (@"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\Resumecrtr.json");
-        public Form1()
+        public generatePage()
         {
             InitializeComponent();
         }
@@ -38,6 +38,11 @@ namespace PDF_Resume_Creator
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generateBtn_Click(object sender, EventArgs e)
         {
 
         }
