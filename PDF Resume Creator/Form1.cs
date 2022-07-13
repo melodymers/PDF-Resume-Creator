@@ -93,6 +93,19 @@ namespace PDF_Resume_Creator
                     XPen linerleft = new XPen(XColors.Snow, 1); ;
                     XPen linerright = new XPen(XColors.Snow, 1);
 
+                    graph.DrawRoundedRectangle(XBrushes.MistyRose, 0, 0, page.Width.Point, page.Height.Point, 30, 20);
+                    graph.DrawRoundedRectangle(XBrushes.MistyRose, 200, 50, page.Width.Point, page.Height.Point, 100, 100);
+                    graph.DrawRectangle(pen, 0, 0, page.Width.Point, page.Height.Point);
+
+                    graph.DrawString("PROGRAMMER", bigfont, XBrushes.Chocolate, new XRect(0, 20, page.Width.Point - 20, page.Height.Point - 50), XStringFormats.TopRight);
+
+                    int marginleft = 25;
+                    int initialleft = 200;
+
+                    string png = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\melody.png";
+                    XImage image = XImage.FromFile(png);
+                    graph.DrawImage(image, marginleft, 50, 150, 150);
+
                     pdf.Save(saveFileDialog.FileName);
                 }
             }
