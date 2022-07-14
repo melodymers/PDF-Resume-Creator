@@ -1,19 +1,19 @@
 {
-      "lastname": "Meria",
-      "firstname": "Melody",
+      "lastname": "MERIA",
+      "firstname": "MELODY",
       "label": "Programmer",
-      "email": "melodymeria2022@gmail.com",
-      "phone": "09554884691",
+      "Email": "melodymeria2022@gmail.com",
+      "Phone": "09554884691",
       "location": {
-        "address": "09 Diverside Homes 2nd St.",
+        "Address": "09 Diverside Homes 2nd St.",
         "barangay": "Gen T. de Leon",
         "city": "Valenzuela City",
         "region": "NCR",
-        "PostalCode": "1442",
+        "postalCode": "1442",
 
       "profiles": [
         {
-          "SocialMedia": "FaceBook",
+          "media": "FaceBook",
           "username": "Melody Mallari Meria",
           "URL": "https://www.facebook.com/meriyuh/"
         }
@@ -29,7 +29,7 @@
     ],
     "languages": [
       {
-        "language": "English and Filipino",
+        "language": "English and Filipino"
       }
     ],
     "interests": [
