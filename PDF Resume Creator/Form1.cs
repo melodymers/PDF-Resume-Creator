@@ -110,7 +110,12 @@ namespace PDF_Resume_Creator
 
                     graph.DrawString("PROGRAMMER", largefont, XBrushes.Chocolate, new XRect(0, 20, addpage.Width.Point - 20, addpage.Height.Point - 50), XStringFormats.TopRight);
 
-                    
+                    int onleft = 25;
+                    int initialleft = 200;
+
+                    string jpg = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\melody.jpg";
+                    XImage img = XImage.FromFile(jpg);
+                    graph.DrawImage(img, onleft, 100, 200, 300);
 
                     pdf.Save(saveFileDialog.FileName);
                 }
