@@ -5,49 +5,19 @@
   "Email": "melodymeria2022@gmail.com",
   "Phone": "09554884691",
   "link": "https://github.com/melodymers",
-  "location": {
+  
     "Address": "09 Diverside Homes 2nd St.",
     "barangay": "Gen T. de Leon",
     "city": "Valenzuela City",
     "region": "NCR",
     "postalCode": "1442",
 
-    "profiles": [
-      {
-        "media": "FaceBook",
-        "username": "Melody Mallari Meria",
-        "URL": "https://www.facebook.com/meriyuh/"
-      }
-    ]
-  },
-  "education": [
-    {
+  "media": "FaceBook",
+  "username": "Melody Mallari Meria",
+  "URL": "https://www.facebook.com/meriyuh/",
+
       "institution": "Polytechnic University Philippines",
-      "course": [
-        "Bachelor of Science in Computer Engineering"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English and Filipino"
-    }
-  ],
-  "interests": [
-    {
-      "interest": "Gaming ",
-      "keywords": [
-        "Mobile",
-        "Arena"
-      ]
-    }
-  ],
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
+      "course": "Bachelor of Science in Computer Engineering",
+      "language": "English and Filipino",
+      "interest": "Gaming "
 }

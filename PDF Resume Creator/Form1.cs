@@ -115,12 +115,19 @@ namespace PDF_Resume_Creator
                     draw.DrawString(lastname +"," + " "+ firstname, largefont, XBrushes.Chocolate, new XRect(0, 20, addpage.Width.Point - 315, addpage.Height.Point - 50), XStringFormats.TopRight);
                     //basic info
                     draw.DrawString("BASIC INFORMATION", titlefont, XBrushes.RosyBrown, new XRect(0, 70, addpage.Width.Point - 390, addpage.Height.Point - 200), XStringFormats.TopRight);
-                    draw.DrawString(Email, smallfont, XBrushes.Brown, new XRect(0, 90, addpage.Width.Point - 395, addpage.Height.Point - 280), XStringFormats.TopRight);
-                    draw.DrawString(Phone, smallfont, XBrushes.Brown, new XRect(0, 100, addpage.Width.Point - 486, addpage.Height.Point - 280), XStringFormats.TopRight);
-                    draw.DrawString(link, smallfont, XBrushes.Brown, new XRect(0, 110, addpage.Width.Point - 390, addpage.Height.Point - 280), XStringFormats.TopRight);
+                    draw.DrawString(Email, smallfont, XBrushes.Brown, new XRect(0, 100, addpage.Width.Point - 397, addpage.Height.Point - 280), XStringFormats.TopRight);
+                    draw.DrawString(Phone, smallfont, XBrushes.Brown, new XRect(0, 120, addpage.Width.Point - 485, addpage.Height.Point - 280), XStringFormats.TopRight);
+                    draw.DrawString(link, smallfont, XBrushes.Brown, new XRect(0, 140, addpage.Width.Point - 395, addpage.Height.Point - 280), XStringFormats.TopRight);
+
+                    //location
+                    draw.DrawString("LOCATION", titlefont, XBrushes.RosyBrown, new XRect(0, 200, addpage.Width.Point + 500, addpage.Height.Point - 200), XStringFormats.TopLeft);
+                    draw.DrawString(Address, smallfont, XBrushes.Brown, new XRect(30, 230, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
+                    draw.DrawString(barangay, smallfont, XBrushes.Brown, new XRect(30, 250, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(city, smallfont, XBrushes.Brown, new XRect(30, 270, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(region, smallfont, XBrushes.Brown, new XRect(30, 290, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft );
+                    draw.DrawString(postalcode, smallfont, XBrushes.Brown, new XRect(30, 310, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
 
                     int onright = 375;
-                    int initialleft = 200;
 
                     string jpg = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\melody.jpg";
                     XImage img = XImage.FromFile(jpg);
