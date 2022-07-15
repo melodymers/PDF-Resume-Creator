@@ -1,23 +1,26 @@
 {
   "lastname": "MERIA",
   "firstname": "MELODY",
-  "label": "Programmer",
+  "profile": "An Engineering Student who is flexible and stays focused even",
+  "profile1": "under pressure. Has basic knowledge on Adobe Photoshop,",
+  "profile2": "Adobe InDesign, and Adobe Illustrator.",
+  "label": "Designer",
   "Email": "melodymeria2022@gmail.com",
   "Phone": "09554884691",
   "link": "https://github.com/melodymers",
-  
-    "Address": "09 Diverside Homes 2nd St.",
-    "barangay": "Gen T. de Leon",
-    "city": "Valenzuela City",
-    "region": "NCR",
-    "postalCode": "1442",
+
+  "Address": "09 Diverside Homes 2nd St.",
+  "barangay": "Gen T. de Leon",
+  "city": "Valenzuela City",
+  "region": "NCR",
+  "postalCode": "1442",
 
   "media": "FaceBook",
   "username": "Melody Mallari Meria",
   "URL": "https://www.facebook.com/meriyuh/",
 
-      "institution": "Polytechnic University Philippines",
-      "course": "Bachelor of Science in Computer Engineering",
-      "language": "English and Filipino",
-      "interest": "Gaming "
+  "institution": "Polytechnic University Philippines",
+  "course": "Bachelor of Science in Computer Engineering",
+  "language": "English and Filipino",
+  "interest": "Gaming "
 }

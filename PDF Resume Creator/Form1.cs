@@ -23,6 +23,9 @@ namespace PDF_Resume_Creator
         {
             public string lastname { get; set; }
             public string firstname { get; set; }
+            public string profile { get; set; }
+            public string profile1 { get; set; }
+            public string profile2 { get; set; }
             public string label { get; set; }
             public string Email { get; set; }
             public string Phone { get; set; }
@@ -58,6 +61,9 @@ namespace PDF_Resume_Creator
 
             string lastname = resumeFromJson.lastname;
             string firstname = resumeFromJson.firstname;
+            string profile = resumeFromJson.profile;
+            string profile1 = resumeFromJson.profile1;
+            string profile2 = resumeFromJson.profile2;
             string label = resumeFromJson.label;
             string Email = resumeFromJson.Email;
             string Phone = resumeFromJson.Phone;
@@ -112,26 +118,36 @@ namespace PDF_Resume_Creator
 
 
                     //name
-                    draw.DrawString(lastname +"," + " "+ firstname, largefont, XBrushes.Chocolate, new XRect(0, 20, addpage.Width.Point - 315, addpage.Height.Point - 50), XStringFormats.TopRight);
+                    draw.DrawString(lastname +"," + " "+ firstname, largefont, XBrushes.Chocolate, new XRect(30, 20, addpage.Width.Point - 315, addpage.Height.Point - 50), XStringFormats.TopLeft);
+
+                    //profile
+                    draw.DrawString("PROFILE", titlefont, XBrushes.RosyBrown, new XRect(30, 70, addpage.Width.Point - 390, addpage.Height.Point - 200), XStringFormats.TopLeft);
+                    draw.DrawString(profile, smallfont, XBrushes.Brown, new XRect(30, 100, addpage.Width.Point - 397, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(profile1, smallfont, XBrushes.Brown, new XRect(30, 120, addpage.Width.Point - 397, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(profile2, smallfont, XBrushes.Brown, new XRect(30, 140, addpage.Width.Point - 397, addpage.Height.Point - 280), XStringFormats.TopLeft);
+
+
                     //basic info
-                    draw.DrawString("BASIC INFORMATION", titlefont, XBrushes.RosyBrown, new XRect(0, 70, addpage.Width.Point - 390, addpage.Height.Point - 200), XStringFormats.TopRight);
-                    draw.DrawString(Email, smallfont, XBrushes.Brown, new XRect(0, 100, addpage.Width.Point - 397, addpage.Height.Point - 280), XStringFormats.TopRight);
-                    draw.DrawString(Phone, smallfont, XBrushes.Brown, new XRect(0, 120, addpage.Width.Point - 485, addpage.Height.Point - 280), XStringFormats.TopRight);
-                    draw.DrawString(link, smallfont, XBrushes.Brown, new XRect(0, 140, addpage.Width.Point - 395, addpage.Height.Point - 280), XStringFormats.TopRight);
+                    draw.DrawString("BASIC INFORMATION", titlefont, XBrushes.RosyBrown, new XRect(30, 170, addpage.Width.Point - 390, addpage.Height.Point - 200), XStringFormats.TopLeft);
+                    draw.DrawString(Email, smallfont, XBrushes.Brown, new XRect(30, 190, addpage.Width.Point - 397, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(Phone, smallfont, XBrushes.Brown, new XRect(30, 210, addpage.Width.Point - 485, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(link, smallfont, XBrushes.Brown, new XRect(30, 230, addpage.Width.Point - 395, addpage.Height.Point - 280), XStringFormats.TopLeft);
 
                     //location
-                    draw.DrawString("LOCATION", titlefont, XBrushes.RosyBrown, new XRect(0, 200, addpage.Width.Point + 500, addpage.Height.Point - 200), XStringFormats.TopLeft);
-                    draw.DrawString(Address, smallfont, XBrushes.Brown, new XRect(30, 230, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
-                    draw.DrawString(barangay, smallfont, XBrushes.Brown, new XRect(30, 250, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
-                    draw.DrawString(city, smallfont, XBrushes.Brown, new XRect(30, 270, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
-                    draw.DrawString(region, smallfont, XBrushes.Brown, new XRect(30, 290, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft );
-                    draw.DrawString(postalcode, smallfont, XBrushes.Brown, new XRect(30, 310, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString("LOCATION", titlefont, XBrushes.RosyBrown, new XRect(30, 260, addpage.Width.Point - 500, addpage.Height.Point - 200), XStringFormats.TopLeft);
+                    draw.DrawString(Address, smallfont, XBrushes.Brown, new XRect(30, 280, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
+                    draw.DrawString(barangay, smallfont, XBrushes.Brown, new XRect(30, 300, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(city, smallfont, XBrushes.Brown, new XRect(30, 320, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
+                    draw.DrawString(region, smallfont, XBrushes.Brown, new XRect(30, 340, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft );
+                    draw.DrawString(postalcode, smallfont, XBrushes.Brown, new XRect(30, 360, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
+
+                    //contact
 
                     int onright = 375;
 
                     string jpg = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\melody.jpg";
                     XImage img = XImage.FromFile(jpg);
-                    draw.DrawImage(img, onright, 25, 200, 300);
+                    draw.DrawImage(img, onright, 25, 200, 200);
 
 
 
