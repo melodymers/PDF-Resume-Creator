@@ -40,9 +40,9 @@ namespace PDF_Resume_Creator
             public string URL { get; set; }
             public string institution { get; set; }
             public string course { get; set; }
-            public string language { get; set; }
-            public string interest { get; set; }
-            public string keywords { get; set; }
+            public string skills { get; set; }
+            public string skills1 { get; set; }
+            public string skills2 { get; set; }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,16 +76,12 @@ namespace PDF_Resume_Creator
             string postalcode = resumeFromJson.postalCode;
             
 
-            string media = resumeFromJson.media;
-            string username = resumeFromJson.username;
-            string url = resumeFromJson.URL;
-
             string school = resumeFromJson.institution;
             string course = resumeFromJson.course;
+            string skills = resumeFromJson.skills;
+            string skills1 = resumeFromJson.skills1;
+            string skills2 = resumeFromJson.skills2;
 
-            string language = resumeFromJson.language;
-            string interest = resumeFromJson.interest;
-            string keywords = resumeFromJson.keywords;
 
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
@@ -141,7 +137,17 @@ namespace PDF_Resume_Creator
                     draw.DrawString(region, smallfont, XBrushes.Brown, new XRect(30, 340, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft );
                     draw.DrawString(postalcode, smallfont, XBrushes.Brown, new XRect(30, 360, addpage.Width.Point - 500, addpage.Height.Point - 280), XStringFormats.TopLeft);
 
-                    //contact
+                    //college
+                    draw.DrawString("SCHOOL", titlefont, XBrushes.RosyBrown, new XRect(30, 390, addpage.Width.Point - 500, addpage.Height.Point - 200), XStringFormats.TopLeft);
+                    draw.DrawString(school, smallfont, XBrushes.Brown, new XRect(30, 410, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
+                    draw.DrawString(course, smallfont, XBrushes.Brown, new XRect(30, 430, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
+
+                    //skills
+                    draw.DrawString("SKILLS", titlefont, XBrushes.RosyBrown, new XRect(30, 460, addpage.Width.Point - 500, addpage.Height.Point - 200), XStringFormats.TopLeft);
+                    draw.DrawString(skills, smallfont, XBrushes.Brown, new XRect(30, 480, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
+                    draw.DrawString(skills1, smallfont, XBrushes.Brown, new XRect(30, 500, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
+                    draw.DrawString(skills2, smallfont, XBrushes.Brown, new XRect(30, 520, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
+
 
                     int onright = 375;
 

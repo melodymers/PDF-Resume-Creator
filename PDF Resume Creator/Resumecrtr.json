@@ -5,22 +5,20 @@
   "profile1": "under pressure. Has basic knowledge on Adobe Photoshop,",
   "profile2": "Adobe InDesign, and Adobe Illustrator.",
   "label": "Designer",
-  "Email": "melodymeria2022@gmail.com",
-  "Phone": "09554884691",
-  "link": "https://github.com/melodymers",
+  "Email": "EMAIL: melodymeria2022@gmail.com",
+  "Phone": "PHONE: 09554884691",
+  "link": "LINK: https://github.com/melodymers",
 
-  "Address": "09 Diverside Homes 2nd St.",
-  "barangay": "Gen T. de Leon",
-  "city": "Valenzuela City",
-  "region": "NCR",
-  "postalCode": "1442",
+  "Address": "ADDRESS: 09 Diverside Homes 2nd St.",
+  "barangay": "BARANGAY: Gen T. de Leon",
+  "city": "CITY: Valenzuela City",
+  "region": "REGION: NCR",
+  "postalCode": "POSTAL: 1442",
 
-  "media": "FaceBook",
-  "username": "Melody Mallari Meria",
-  "URL": "https://www.facebook.com/meriyuh/",
+  "institution": "INSTITUTION: Polytechnic University Philippines",
+  "course": "PROGRAM: Bachelor of Science in Computer Engineering",
 
-  "institution": "Polytechnic University Philippines",
-  "course": "Bachelor of Science in Computer Engineering",
-  "language": "English and Filipino",
-  "interest": "Gaming "
+  "skills": "Web Design",
+  "skills1": "Problem-Solving",
+  "skills2": "Computer Literacy"
 }
