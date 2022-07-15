@@ -109,8 +109,7 @@ namespace PDF_Resume_Creator
 
                     
                     XPen colorpen = new XPen(XColors.LightCoral, 20);
-                    XPen lineinleft = new XPen(XColors.Snow, 1); ;
-                    XPen lineinright = new XPen(XColors.Snow, 1);
+                   
 
                     //page
                     draw.DrawRoundedRectangle(XBrushes.MistyRose, 0, 0, addpage.Width.Point, addpage.Height.Point, 30, 20);
