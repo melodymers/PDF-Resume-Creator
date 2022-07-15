@@ -91,12 +91,12 @@ namespace PDF_Resume_Creator
                     PdfPage addpage = pdf.AddPage();
 
                     //page
-                    XGraphics graph = XGraphics.FromPdfPage(addpage);
+                    XGraphics draw = XGraphics.FromPdfPage(addpage);
 
                     //font
-                    XFont largefont = new XFont("SoinSans", 20, XFontStyle.Bold);
-                    XFont smallfont = new XFont("SoinSans", 16, XFontStyle.Regular);
-                    XFont titlefont = new XFont("SoinSans", 30, XFontStyle.Bold);
+                    XFont largefont = new XFont("SoinSans", 30, XFontStyle.Bold);
+                    XFont smallfont = new XFont("SoinSans", 12, XFontStyle.Regular);
+                    XFont titlefont = new XFont("SoinSans", 16, XFontStyle.Bold);
 
                     
                     XPen colorpen = new XPen(XColors.LightCoral, 20);
@@ -104,19 +104,30 @@ namespace PDF_Resume_Creator
                     XPen lineinright = new XPen(XColors.Snow, 1);
 
                     //page
-                    graph.DrawRoundedRectangle(XBrushes.MistyRose, 0, 0, addpage.Width.Point, addpage.Height.Point, 30, 20);
-                    graph.DrawRoundedRectangle(XBrushes.MistyRose, 200, 50, addpage.Width.Point, addpage.Height.Point, 100, 100);
-                    graph.DrawRectangle(colorpen, 0, 0, addpage.Width.Point, addpage.Height.Point);
+                    draw.DrawRoundedRectangle(XBrushes.MistyRose, 0, 0, addpage.Width.Point, addpage.Height.Point, 30, 20);
+                    draw.DrawRoundedRectangle(XBrushes.MistyRose, 200, 50, addpage.Width.Point, addpage.Height.Point, 100, 100);
+                    draw.DrawRectangle(colorpen, 0, 0, addpage.Width.Point, addpage.Height.Point);
 
-                    graph.DrawString("PROGRAMMER", largefont, XBrushes.Chocolate, new XRect(0, 20, addpage.Width.Point - 20, addpage.Height.Point - 50), XStringFormats.TopRight);
+
+                    //name
+                    draw.DrawString(lastname +"," + " "+ firstname, largefont, XBrushes.Chocolate, new XRect(0, 20, addpage.Width.Point - 315, addpage.Height.Point - 50), XStringFormats.TopRight);
+                    //basic info
+                    draw.DrawString("BASIC INFORMATION", titlefont, XBrushes.RosyBrown, new XRect(0, 70, addpage.Width.Point - 390, addpage.Height.Point - 200), XStringFormats.TopRight);
+
+
+
 
                     int onright = 375;
                     int initialleft = 200;
 
                     string jpg = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\melody.jpg";
                     XImage img = XImage.FromFile(jpg);
-                    graph.DrawImage(img, onright, 50, 200, 300);
+                    draw.DrawImage(img, onright, 25, 200, 300);
 
+                    draw.DrawString("BASIC INFORMATION", largefont, XBrushes.Chocolate, new XRect(onright, initialleft - 320, addpage.Width.Point, addpage.Height.Point - 100), XStringFormats.TopRight);
+
+
+                    
                     pdf.Save(saveFileDialog.FileName);
                 }
             }
