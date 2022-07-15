@@ -26,6 +26,7 @@ namespace PDF_Resume_Creator
             public string label { get; set; }
             public string Email { get; set; }
             public string Phone { get; set; }
+            public string link { get; set; }
             public string Address { get; set; }
             public string barangay { get; set; }
             public string city { get; set; }
@@ -60,6 +61,7 @@ namespace PDF_Resume_Creator
             string label = resumeFromJson.label;
             string Email = resumeFromJson.Email;
             string Phone = resumeFromJson.Phone;
+            string link = resumeFromJson.link;
 
             string Address = resumeFromJson.Address;
             string barangay = resumeFromJson.barangay;
@@ -113,9 +115,9 @@ namespace PDF_Resume_Creator
                     draw.DrawString(lastname +"," + " "+ firstname, largefont, XBrushes.Chocolate, new XRect(0, 20, addpage.Width.Point - 315, addpage.Height.Point - 50), XStringFormats.TopRight);
                     //basic info
                     draw.DrawString("BASIC INFORMATION", titlefont, XBrushes.RosyBrown, new XRect(0, 70, addpage.Width.Point - 390, addpage.Height.Point - 200), XStringFormats.TopRight);
-
-
-
+                    draw.DrawString(Email, smallfont, XBrushes.Brown, new XRect(0, 90, addpage.Width.Point - 395, addpage.Height.Point - 280), XStringFormats.TopRight);
+                    draw.DrawString(Phone, smallfont, XBrushes.Brown, new XRect(0, 100, addpage.Width.Point - 486, addpage.Height.Point - 280), XStringFormats.TopRight);
+                    draw.DrawString(link, smallfont, XBrushes.Brown, new XRect(0, 110, addpage.Width.Point - 390, addpage.Height.Point - 280), XStringFormats.TopRight);
 
                     int onright = 375;
                     int initialleft = 200;
@@ -124,7 +126,6 @@ namespace PDF_Resume_Creator
                     XImage img = XImage.FromFile(jpg);
                     draw.DrawImage(img, onright, 25, 200, 300);
 
-                    draw.DrawString("BASIC INFORMATION", largefont, XBrushes.Chocolate, new XRect(onright, initialleft - 320, addpage.Width.Point, addpage.Height.Point - 100), XStringFormats.TopRight);
 
 
                     
