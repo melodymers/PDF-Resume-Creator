@@ -106,9 +106,8 @@ namespace PDF_Resume_Creator
                     XFont largefont = new XFont("SoinSans", 30, XFontStyle.Bold);
                     XFont smallfont = new XFont("SoinSans", 12, XFontStyle.Regular);
                     XFont titlefont = new XFont("SoinSans", 16, XFontStyle.Bold);
-
-                    
-                    XPen colorpen = new XPen(XColors.LightCoral, 20);
+                 
+                   XPen colorpen = new XPen(XColors.LightCoral, 20);
                    
 
                     //page
@@ -164,8 +163,6 @@ namespace PDF_Resume_Creator
                     string jpg = @"C:\Users\Melody\source\repos\PDF Resume Creator\PDF Resume Creator\melody.jpg";
                     XImage img = XImage.FromFile(jpg);
                     draw.DrawImage(img, onright, 25, 200, 200);
-
-
 
                     
                     pdf.Save(saveFileDialog.FileName);
