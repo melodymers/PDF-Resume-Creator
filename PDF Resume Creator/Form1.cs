@@ -55,12 +55,12 @@ namespace PDF_Resume_Creator
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
-            string JsonFile;
+            string JSONFile;
             using (var reader = new StreamReader(PDF_Resume_Creator))
             {
-                JsonFile = reader.ReadToEnd();
+                JSONFile = reader.ReadToEnd();
             }
-            var resumeFromJson = JsonConvert.DeserializeObject<Resumecrtr>(JsonFile);
+            var resumeFromJson = JsonConvert.DeserializeObject<Resumecrtr>(JSONFile);
 
             string lastname = resumeFromJson.lastname;
             string firstname = resumeFromJson.firstname;
@@ -145,13 +145,13 @@ namespace PDF_Resume_Creator
                     draw.DrawString(school, smallfont, XBrushes.Brown, new XRect(30, 420, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
                     draw.DrawString(course, smallfont, XBrushes.Brown, new XRect(30, 440, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
 
-                    //skills
+                    //hard skills
                     draw.DrawString("HARD SKILLS", titlefont, XBrushes.RosyBrown, new XRect(30, 470, addpage.Width.Point - 500, addpage.Height.Point - 200), XStringFormats.TopLeft);
                     draw.DrawString(skills, smallfont, XBrushes.Brown, new XRect(30, 490, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
                     draw.DrawString(skills1, smallfont, XBrushes.Brown, new XRect(30, 510, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
                     draw.DrawString(skills2, smallfont, XBrushes.Brown, new XRect(30, 530, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
 
-                    //skills
+                    //soft skills
                     draw.DrawString("SOFT SKILLS", titlefont, XBrushes.RosyBrown, new XRect(30, 560, addpage.Width.Point - 500, addpage.Height.Point - 200), XStringFormats.TopLeft);
                     draw.DrawString(skills3, smallfont, XBrushes.Brown, new XRect(30, 580, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
                     draw.DrawString(skills4, smallfont, XBrushes.Brown, new XRect(30, 600, addpage.Width.Point - 200, addpage.Height.Point - 290), XStringFormats.TopLeft);
